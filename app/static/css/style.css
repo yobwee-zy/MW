@@ -1,0 +1,33 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px;
+    background: #F5C6C6;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+button, a {
+    background: #B76E79;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

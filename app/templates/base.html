@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beauty Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/shop">Shop</a>
+    <a href="/cart">Cart</a>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Glow with Confidence</h1>
+    <p>Premium skincare, makeup & haircare</p>
+    <a href="/shop">Shop Now</a>
+</section>
+
+<section class="trust">
+    <p>✔ Authentic Products | ✔ Fast Delivery | ✔ Pay with M-Pesa</p>
+</section>
+
+<section class="products">
+    <h2>Best Sellers</h2>
+
+    <div class="grid">
+        {% for product in products %}
+        <div class="card">
+            <img src="{{ product.image }}">
+            <h3>{{ product.name }}</h3>
+            <p>KES {{ product.price }}</p>
+            <a href="/product/{{ product.id }}">View</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
