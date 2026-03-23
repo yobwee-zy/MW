@@ -1,1 +1,48 @@
+<form method="GET" class="filters">
 
+    <input type="text" name="search"
+           placeholder="Search products..."
+           value="{{ search or '' }}">
+
+    <select name="category">
+        <option value="All">All Categories</option>
+
+        {% for cat in categories %}
+            <option value="{{ cat }}"
+                {% if selected_category == cat %}selected{% endif %}>
+                {{ cat }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Filter</button>
+</form>
+
+
+<div class="grid">
+
+    {% for product in products %}
+
+        <div class="card">
+
+            <a href="/product/{{ product.id }}">
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+            </a>
+
+            <h3>
+                <a href="/product/{{ product.id }}">
+                    {{ product.name }}
+                </a>
+            </h3>
+
+            <p><strong>KES {{ product.price }}</strong></p>
+
+            <a href="/add_to_cart/{{ product.id }}" class="btn">
+                Add to Cart
+            </a>
+
+        </div>
+
+    {% endfor %}
+
+</div>
